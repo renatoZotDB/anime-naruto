@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NinjaDeNinjutsuTest {
@@ -34,5 +35,11 @@ public class NinjaDeNinjutsuTest {
         assertTrue(outContent.toString().contains("Ninja de Ninjutsu Naruto está desviando de um ataque com sua habilidade de Ninjutsu!"));
 
         System.setOut(System.out);
+    }
+
+    @Test
+    public void deveRetornarStringFormatada() {
+        NinjaDeNinjutsu ninja = new NinjaDeNinjutsu("Naruto", 17, "Konoha", "Rasengan");
+        assertTrue(ninja.toString().contains("NinjaDeNinjutsu{nome='Naruto', idade=17, aldeia='Konoha'"));
     }
 }

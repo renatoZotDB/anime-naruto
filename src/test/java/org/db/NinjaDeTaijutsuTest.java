@@ -36,4 +36,10 @@ class NinjaDeTaijutsuTest {
         System.setOut(System.out);
     }
 
+    @Test
+    public void deveRetornarStringFormatada() {
+        NinjaDeTaijutsu ninja = new NinjaDeTaijutsu("Rock Lee", 17, "Konoha", "Konoha Senpuu");
+        assertTrue(ninja.toString().contains("NinjaDeTaijutsu{nome='Rock Lee', idade=17, aldeia='Konoha'"));
+    }
+
 }
